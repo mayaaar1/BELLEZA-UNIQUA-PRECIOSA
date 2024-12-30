@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en,fr,ar,esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" bienvenue sur mon siteweb c'est une boutique online se qu'on appelle e-commerce ou vous trouver tout ce qui est beaute , selfcare, bodycare,haircare,skincare,handcare,feetcare,beautiful u,love,loveself,natural et glowy">
+    <meta name="author" content="Yagoubi Zohra Mayar">
+    <meta name="keywords" content="selfcare,lovecare,bodycare,skincare,haircare,feetcare,ha,dcare,beauty,love,care">
+    <link rel="stylesheet" href="design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c352df61bb.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+    <title>BELLEZA PRECIOSA UNIQUA</title>
+</head>
+
+<body>
+    <nav class="menu">
+    
+        <a id="logo" href="/">Uniqua</a>
+
+        <form id="search-form" action=" /search" method="get">
+            <input type="text" id="search" name="query" placeholder="Explora tu belleza...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <ul>
+            <li> <a class="active" href="index.html">Home</a></li>
+            <li> <a href="selfCare.html">Selfcare</a></li>
+            <li> <a href="faceCare.html">Skincare</a></li>
+            <li> <a href="hairCare.html">Haircare</a></li>
+            <li> <a href="bodyCare.html">Bodycare</a></li>
+            <li> <a href="#"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-heart"></i>
+                <a href="inscription.html"><i class="fa-solid fa-user"></i></a></a></li>
+        </ul>
+    </nav>
+
+    <section id="banner">
+        <div id="banner-desc">
+            <h1>¡Elegancia radiante!</h1>
+            <p>Mi hermosa bienvenida al lugar donde la elegancia se combina con la excelencia para amplificar tu esencia "UNIQUA BELLEZA PRECIOSA", descubre nuestros tesoros de consejos dedicados al cuidado de tu cuerpo, rostro, de ti mismo y de tu cabello, y déjate inspirar por nuestra filosofía. de amor propio y date cuenta de tu singularidad.</p>
+            <a href="inscription.html" id="banner-btn">Vamooos</a>
+        </div>
+        <video id="banner-video" width=" 300px" autoplay loop muted>
+            <source src=" banner video.mp4" type="video/mp4">
+        </video>
+        <span id="banner-shader"></span>
+
+    </section>
+    <section id="descriptions">
+        <div id="cards-container">
+            <div class="card n0 active" onclick="setActive(0)">
+                <img src="" alt="">
+                <!-- <img class="coverImg" src="img (1).jpg" alt=""> -->
+                <div>
+                    <h2>Skin Care</h2>
+                    <p>Para cuidar eficazmente la piel de tu rostro, es fundamental identificar tu tipo de piel: realiza una sencilla prueba y evita lavarte la cara al principio. Si nota grasa principalmente en la zona T, esto sugiere piel mixta, la grasa visible generalmente indica piel grasa, mientras que la falta de humedad y una apariencia pálida significa piel seca. Además, si su piel tiende a reaccionar con sensibilidad a los productos y factores ambientales, puede indicar sensibilidad..</p>
+                    <a href="faceCare.html">expandirse a nuestro universo</a>
+                </div>
+            </div>
+            <div class=" card n1 " onclick=" setActive(1)">
+                <img src="" alt="">
+                <div>
+                    <h2>Hair Care</h2>
+                    <p>Para mantener un cabello hermoso y saludable, al identificar el nivel de porosidad de tu cabello, es esencial elegir cuidadosamente los productos para el cabello, entender tu tipo de cabello es esencial y desarrollar una rutina de cuidado del cabello personalizada para mantener tu cabello con el mejor aspecto posible, determínalos con una prueba sencilla:
+                        Toma un solo mechón de cabello, colócalo en una taza llena de agua, los resultados indican la porosidad de tu cabello:
+                        - Si el pelo baja hasta el fondo de la copa, tiene porosidad alta: aceite de oliva, ricino, coco y aguacate.
+                        - Si el cabello está en la mitad del corte, tiene porosidad media.
+                        - Si el cabello flota hacia la superficie o sube del corte, tiene porosidad baja: jojoba, argán, pepita de uva y aceite de almendras..</p>
+                    <a href="hairCare.html">expandirse a nuestro universo</a>
+                </div>
+            </div>
+            <div class="card n2" onclick="setActive(2)">
+                <img src="" alt="">
+                <div>
+                    <h2>Body care</h2>
+                    <p>Cuidar tu cuerpo es una danza artística de amor propio y cariño. Comienza con un tierno tratamiento, durante el cual limpias delicadamente los restos del día, revelando el resplandor natural de tu piel. Con cada aplicación de crema hidratante, te envuelves en un manto de hidratación, reponiendo y revitalizando los suaves contornos de tu cuerpo. El cuidado se convierte en un ritual de refinamiento, esculpiendo tu apariencia con precisión y cuidado. Mientras te envuelves en un velo de fragancia, cada nota susurra una sinfonía de elegancia, dejando un rastro persistente de encanto dondequiera que vayas. Con cada paso, tu cuerpo se convierte en una obra maestra, un lienzo de belleza y gracia, un testimonio de la dedicación que muestras al apreciar el recipiente que te lleva por la vida.</p>
+                    <a href="bodyCare.html">expandirse a nuestro universo</a>
+                </div>
+            </div>
+            <div class="card n3" onclick="setActive(3)">
+                <img src="" alt="">
+                <div>
+                    <h2>Self care</h2>
+                    <p>El cuidado personal es una forma de amor en la que el deporte marca la pauta con lujosas velas, se expresa a través de elegantes bailes y se entrega al lujo elegante para una refinada experiencia de bienestar reformularlo mejor.</p>
+                    <a href="selfCare.html">expandirse a nuestro universo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="top-products">
+        <h1>Mejorar predoctos</h1>
+        <div id="products">
+            <button onclick="goRight()" class="btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button onclick="goLeft()" class="btn"><i class="fa-solid fa-chevron-right"></i></button>
+            <div id="products-container">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="main-products">
+        <h1>Facial productos</h1>
+        <div id="all-products-container">
+        </div>
+    </section>
+
+    <section class="main-products">
+        <h1>Cabelo productos</h1>
+        <div id="hair-products-container">
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <section id="cta">
+        <div>
+            <h1>¡Únete a Nosotras Ahora!</h1>
+            <a href="inscription.html">Descubrir <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div id="caroussel">
+            <div class="image">
+                <img src="atestic.jpg" alt="selfcare">
+                <img src="facial.jpg" alt="skincare">
+                <img src="photpcup.jpg" alt="haircare">
+                <img src="header.jpg" alt="bodycare">
+                <img src="feeta.jpg" alt="feetcare">
+                <img src="pinky nail.jpg" alt="handcare">
+                <img src="ultiiiiiiiima.jpg" alt="selfcare1">
+                <img src="elegancia.jpg" alt="selfcare1">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h1>Uniqua</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="">Shop</a></td>
+                    <td><a href="">About Us</a></td>
+                    <td><a href="">Contact Us</a></td>
+                    <td><a href="">FAQs</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Blog</a></td>
+                    <td><a href="">Reviews/Testimonials</a></td>
+                    <td><a href="">Shipping & Delivery</a></td>
+                    <td><a href="">Returns & Exchanges</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Love self</a></td>
+                    <td><a href="">Choclate</a></td>
+                    <td><a href="">Cutie pie</a></td>
+                    <td><a href="">Privacy & policy</a></td>
+                </tr>
+            </table>
+            <ul>
+                <li><a href=""><i class="fa-solid fa-credit-card"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-snapchat"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Uniqua</h3>
+            <span>Zohra YAGOUBI 2024 &copy; All rights reserved <a href="#">Privacy & Policy</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>

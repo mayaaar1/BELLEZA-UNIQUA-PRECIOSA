@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" bienvenue sur mon siteweb c'est une boutique online se qu'on appelle e-commerce ou vous trouver tout ce qui est beaute , selfcare, bodycare,haircare,skincare,handcare,feetcare,beautiful u,love,loveself,natural et glowy">
+    <meta name="author" content="Yagoubi Zohra Mayar">
+    <meta name="keywords" content="selfcare,lovecare,bodycare,skincare,haircare,feetcare,ha,dcare,beauty,love,care">
+    <link rel="stylesheet" href="design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c352df61bb.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+
+    <title>Uniqua | Hair care</title>
+</head>
+
+<body>
+    <nav class="menu">
+    
+        <a id="logo" href="/">Uniqua</a>
+
+        <form id="search-form" action=" /search" method="get">
+            <input type="text" id="search" name="query" placeholder="Explora tu belleza...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <ul>
+            <li> <a class="active" href="index.html">Home</a></li>
+            <li> <a href="selfCare.html">Selfcare</a></li>
+            <li> <a href="faceCare.html">Skincare</a></li>
+            <li> <a href="hairCare.html">Haircare</a></li>
+            <li> <a href="bodyCare.html">Bodycare</a></li>
+            <li> <a href="#"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-heart"></i>
+                <a href="inscription.html"><i class="fa-solid fa-user"></i></a></a></li>
+        </ul>
+    </nav>
+    <div id="mini-banner-hair">
+        <h1>Hair care</h1>
+        <p> Toma un solo mechón de cabello, colócalo en una taza llena de agua, los resultados indican la porosidad de tu cabello:
+        - Si el pelo baja hasta el fondo de la copa, tiene porosidad alta: aceite de oliva, ricino, coco y aguacate.
+        - Si el cabello está en la mitad del corte, tiene porosidad media.
+        - Si el cabello flota hacia la superficie o sube del corte, tiene porosidad baja: jojoba, argán, pepita de uva y aceite de almendras..</p>
+    </div>
+    <div id="all-products-container">
+    </div>
+    <footer>
+        <h1>Uniqua</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="">Shop</a></td>
+                    <td><a href="">About Us</a></td>
+                    <td><a href="">Contact Us</a></td>
+                    <td><a href="">FAQs</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Blog</a></td>
+                    <td><a href="">Reviews/Testimonials</a></td>
+                    <td><a href="">Shipping & Delivery</a></td>
+                    <td><a href="">Returns & Exchanges</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Love self</a></td>
+                    <td><a href="">Choclate</a></td>
+                    <td><a href="">Cutie pie</a></td>
+                    <td><a href="">Privacy & policy</a></td>
+                </tr>
+            </table>
+            <ul>
+                <li><a href=""><i class="fa-solid fa-credit-card"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-snapchat"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Uniqua</h3>
+            <span>Zohra Mayar YAGOUBI 2024 &copy; All rights reserved <a href="#">Privacy & Policy</a></span>
+        </div>
+    </footer>
+    <script>
+
+        const products = [
+            { name: 'Almond Oil', price: '1800 DA' },
+            { name: 'Argan Oil', price: '2000 DA' },
+            { name: 'Avocado Oil', price: '2200 DA' },
+            { name: 'Banana Hair Mask', price: '1900 DA' },
+            { name: 'Organic Castor Oil', price: '2100 DA' },
+            { name: 'Coconut Hair Mask', price: '2300 DA' },
+            { name: 'Coconut Oil', price: '2500 DA' },
+            { name: 'Banana Hair Mask', price: '1900 DA' },
+            { name: 'Papaya Hair Mask', price: '2000 DA' },
+            { name: 'Cacao Hair Mask', price: '2200 DA' },
+            { name: 'Macadamia Hair Mask', price: '2400 DA' },
+            { name: 'Grape Seed Oil', price: '2100 DA' },
+            { name: 'Potent Hydration Mask', price: '2300 DA' },
+            { name: 'Coconut Milk', price: '2200 DA' },
+            { name: 'Jojoba Oil', price: '2000 DA' },
+            { name: 'Hair Comb', price: '1500 DA' },
+            { name: 'Scalp & Hair Quencher', price: '2100 DA' },
+            { name: 'Scalp & Hair Strengthening Oil', price: '2300 DA' },
+            { name: 'Bonding Oil', price: '2400 DA' }
+        ];
+        const container = document.getElementById("all-products-container")
+        for (let i = 0; i < 20; i++) {
+            container.style.width = `calc(100% +${i * 258}px)`
+            container.innerHTML += `
+    <div class="product-card">
+                    <img src="shop/hairshop/hair (${i + 1}).jpg" alt="">
+                    <div class="desc">
+                        <h2 id="product-name">${products[i].name}</h2 >
+                        <span>${products[i].price}</span>
+                        <div>
+                            <button>
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div >
+                </div >
+    `
+        }
+    </script>
+
+</body>
+
+</html>

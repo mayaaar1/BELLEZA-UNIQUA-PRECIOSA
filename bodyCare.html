@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" bienvenue sur mon siteweb c'est une boutique online se qu'on appelle e-commerce ou vous trouver tout ce qui est beaute , selfcare, bodycare,haircare,skincare,handcare,feetcare,beautiful u,love,loveself,natural et glowy">
+    <meta name="author" content="Yagoubi Zohra Mayar">
+    <meta name="keywords" content="selfcare,lovecare,bodycare,skincare,haircare,feetcare,ha,dcare,beauty,love,care">
+    <link rel="stylesheet" href="design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c352df61bb.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+
+    <title>Uniqua | Body care</title>
+</head>
+
+<body>
+    <nav class="menu">
+    
+        <a id="logo" href="/">Uniqua</a>
+
+        <form id="search-form" action=" /search" method="get">
+            <input type="text" id="search" name="query" placeholder="Explora tu belleza...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <ul>
+            <li> <a class="active" href="index.html">Home</a></li>
+            <li> <a href="selfCare.html">Selfcare</a></li>
+            <li> <a href="faceCare.html">Skincare</a></li>
+            <li> <a href="hairCare.html">Haircare</a></li>
+            <li> <a href="bodyCare.html">Bodycare</a></li>
+            <li> <a href="#"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-heart"></i>
+                <a href="inscription.html"><i class="fa-solid fa-user"></i></a></a></li>
+        </ul>
+    </nav>
+    <div id="mini-banner-body">
+        <h1>Body care</h1>
+        <p>Cuidar tu cuerpo es una danza artística de amor propio y cariño. Comienza con un tierno tratamiento, durante el cual limpias delicadamente los restos del día, revelando el resplandor natural de tu piel. Con cada aplicación de crema hidratante, te envuelves en un manto de hidratación, reponiendo y revitalizando los suaves contornos de tu cuerpo. El cuidado se convierte en un ritual de refinamiento, esculpiendo tu apariencia con precisión y cuidado. Mientras te envuelves en un velo de fragancia, cada nota susurra una sinfonía de elegancia, dejando un rastro persistente de encanto dondequiera que vayas. Con cada paso, tu cuerpo se convierte en una obra maestra, un lienzo de belleza y gracia, un testimonio de la dedicación que muestras al apreciar el recipiente que te lleva por la vida.</p>
+    </div>
+    <div id="all-products-container">
+    </div>
+    <footer>
+        <h1>Uniqua</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="">Shop</a></td>
+                    <td><a href="">About Us</a></td>
+                    <td><a href="">Contact Us</a></td>
+                    <td><a href="">FAQs</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Blog</a></td>
+                    <td><a href="">Reviews/Testimonials</a></td>
+                    <td><a href="">Shipping & Delivery</a></td>
+                    <td><a href="">Returns & Exchanges</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Love self</a></td>
+                    <td><a href="">Choclate</a></td>
+                    <td><a href="">Cutie pie</a></td>
+                    <td><a href="">Privacy & policy</a></td>
+                </tr>
+            </table>
+            <ul>              
+                <li><a href=""><i class="fa-solid fa-credit-card"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-snapchat"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Uniqua</h3>
+            <span>Zohra Mayar YAGOUBI 2024 &copy; All rights reserved <a href="#">Privacy & Policy</a></span>
+        </div>
+    </footer>
+    <script>
+        const products = [
+            { name: 'Skin Brush', price: '1500 DA' },
+            { name: 'Baby Massage Oil', price: '2000 DA' },
+            { name: 'Essential Moisture', price: '1800 DA' },
+            { name: 'Baby Oil', price: '1700 DA' },
+            { name: 'Body Oil Gel', price: '1900 DA' },
+            { name: 'Honey Body Oil', price: '2200 DA' },
+            { name: 'Bum Bum Cream', price: '2500 DA' },
+            { name: 'Elasti Cream', price: '2100 DA' },
+            { name: 'Power Cream', price: '2300 DA' },
+            { name: 'Bright Cream', price: '2000 DA' },
+            { name: 'Cabana Cream', price: '2400 DA' },
+            { name: 'Acai Cream', price: '2100 DA' },
+            { name: 'Bronzed Coconut', price: '1800 DA' },
+            { name: 'Body Lofa', price: '1000 DA' },
+            { name: 'Vanilla Body Yogurt', price: '2200 DA' },
+            { name: 'Coconut Body Yogurt', price: '2300 DA' },
+            { name: 'British Rose Body Yogurt', price: '2500 DA' },
+            { name: 'Moringa Body Yogurt', price: '2300 DA' },
+            { name: 'Mango Body Yogurt', price: '2400 DA' },
+            { name: 'Pink Grapefruit Body Yogurt', price: '2200 DA' },
+            { name: 'Banana Body Yogurt', price: '2100 DA' }
+        ];
+        const container = document.getElementById("all-products-container")
+        for (let i = 0; i < 20; i++) {
+            container.style.width = `calc(100% +${i * 258}px)`
+            container.innerHTML += `
+    <div class="product-card">
+                    <img src="shop/bodyshop/body (${i + 2}).jpg" alt="">
+                    <div class="desc">
+                        <h2 id="product-name">${products[i].name}</h2 >
+                        <span>${products[i].price}</span>
+                        <div>
+                            <button>
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div >
+                </div >
+    `
+        }
+    </script>
+
+</body>
+
+</html>

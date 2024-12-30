@@ -1,0 +1,580 @@
+
+*{
+  padding: 0; margin: 0; box-sizing: border-box; font: 1.03em "open-sans",sans-serif;
+}
+body{
+  background-color: #ffffff;
+}
+.menu{ 
+  /* width: 100%; background-color: #f8b0bd; color: rgb(247, 214, 173); height: 60px; */
+}
+nav { 
+  display: flex ;
+  align-items:center ; justify-content : space-between ;
+  /* padding-top: 40px; padding-left: 10%; padding-right: 10%;  */
+  padding: 10px 8%;
+  background: white;
+  box-shadow: 0 0 2px 4px #0005;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 805;
+}
+
+#logo {
+  color:#dd677c; 
+  font-size: 30px; font-family: "Satisfy",cursive;
+  text-decoration: none;
+  
+}
+nav ul li {
+  list-style-type: none; display: inline-block; padding: 10px ;
+}
+nav ul li a{
+  text-decoration: none; 
+  /* font-weight: bold;  */
+  font-family: 'montserrat', sans-serif;
+  color: rgb(55, 55, 55);
+}
+nav ul li a.active{
+  color: #c12b46;
+  text-decoration: underline;
+}
+nav ul li a:hover{
+  color: rgb(81, 81, 81);
+   transition: .3s; 
+}
+nav button{
+  border: none; 
+  background: #dd677c; 
+  padding: 12px ;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; 
+  color: rgb(240, 240, 164);
+  font-weight: bold; 
+  font-size: 15px;  
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+} 
+nav button:hover{
+  /* transform: scale(1.05); */
+  background: #ff8ca1; 
+   cursor: pointer; 
+}
+#caroussel{
+  width: 640px;
+  overflow: hidden; 
+  border: solid 2px black;
+  z-index: 0;
+  
+}
+.image{
+  display: flex;
+  width: 2560px ;
+  height: 420px;
+  animation-duration: 20s;
+  animation-name: mimages;
+  animation-iteration-count: infinite;
+}
+#banner-video{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+#search-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search-form input{
+  background-color: #EEF;
+  border-radius: 20px;
+  border: none;
+  padding: 7px;
+
+}
+.image img{
+  width: 320px;
+}
+
+@keyframes mimages {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-640px);
+  }
+  50% {
+      transform: translateX(-1280px);
+  }
+  75% {
+      transform: translateX(-1920px);
+  }
+  100% {
+      transform: translateX(0);}
+}
+#banner{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 7%;
+}
+#banner-desc {
+  width: 60%;
+  z-index: 2;
+}
+#banner-shader{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#banner-desc h1{
+  color: #FFF;
+  font-family: "montserrat", sans-serif;
+  font-size: 50px;
+}
+
+#banner-desc p{
+  color: #FFF;
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#banner-btn{
+  /* background-color: rgb(39, 85, 116); */
+  background-color: #c12b46;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+}
+#descriptions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#cards-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  /* background-color: #145184; */
+}
+.card {
+  width: 6%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: rgb(142, 9, 9);
+  margin: 0 7px;
+  transition: 0.5s;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  padding: 20px;
+  /* justify-content: end; */
+  align-items: end;
+}
+.card.active{
+  width: 82%;
+}
+
+.card div{
+  display: none;
+}
+.card div h2{
+  font-family: "montserrat", sans-serif;
+  color: white;
+  font-size: 40px;
+}
+.card div p{
+  font-family: "montserrat", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card div a{
+  color: white;
+  background-color: #c12b46;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  /* margin-top: 20px; */
+}
+.card.active div{
+  display: block;
+}
+.n0, .n2, .n1, .n3{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.n0{
+  background-image: linear-gradient(#0005, #0005), url("bg.jpg");
+}
+.n1{
+  background-image: linear-gradient(#0005, #0005), url("hairBg.jpg");
+}
+.n2{
+  background-image: linear-gradient(#0005, #0005), url("bodyBg.jpg");
+}
+.n3{
+  background-image: linear-gradient(#0005, #0005), url("selfBg.jpg");
+}
+.coverImg{
+  /* width: 100%; */
+  height: 100%;
+  /* object-fit: cover; */
+}
+#top-products {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(214, 214, 214);
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#top-products h1{
+  font-size: 20px;
+  font-family: "montserrat", sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#top-products #products{
+  width: 100%;
+  height: 258px;
+  /* background-color: #dd677c; */
+  position: relative;
+  overflow: hidden;
+}
+#top-products #products .btn{
+  width: 35px;
+  height: 35px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  columns: #333;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+}
+#top-products #products .btn:nth-child(1){
+  transform: translate(0%, -50%);
+}
+#top-products #products .btn:nth-child(2){
+  right: 0;
+  transform: translate(0%, -50%);
+}
+#products-container{
+  height: 100%;
+  display: flex;
+  width: 2144px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.product-card{
+  display: inline-block;
+  width: 160px;
+  height: 100%;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.137);
+  /* background-color: #dd677c; */
+  overflow: hidden;
+  margin: 0 5px;
+  
+}
+.product-card img{
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.product-card div.desc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.product-card div h2{
+  font-family: "montserrat", sans-serif;
+  color: #333;
+  font-size: 16px;
+  padding-left: 5px;
+}
+.product-card div span{
+  font-family: "montserrat", sans-serif;
+  color: #333;
+  font-size: 14px;
+  padding-right: 5px;
+  /* width: 100%; */
+}
+.product-card div button{
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.main-products h1{
+  color: #444;
+  font-family: "montserrat", sans-serif;
+  margin: 20px 0 20px 8% ;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+#all-products-container, #hair-products-container{
+  width: 100%;
+  position: relative;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 20px;
+  margin-bottom: 70px;
+  
+  /* position: absolute; */
+  /* bottom: 0; */
+}
+#all-products-container div, #hair-products-container div{
+  /* background-color: #dd677c; */
+  height: 258px;
+  width: 100%;
+}
+#cta{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cta div h1{
+  font-family: "montserrat", sans-serif;
+  font-size: 30px;
+  padding-right: 50px;
+  margin-bottom: 10px;
+}
+#cta div a{
+  font-family:  "montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  border: none;
+  background-color: #dd677c;
+  color: white;
+  border-radius: 6px;
+  padding: 7px 10px;
+}
+footer{
+  padding:  10px 30px;
+  background-color: #dd677c;
+  margin-top: 20px;
+}
+footer h1{
+  font-family: "Satisfy",cursive;
+  font-size: 50px;
+  color: #fff;
+  padding: 10px 0;
+}
+footer h3{
+  font-family: "Satisfy",cursive;
+  font-size: 30px;
+  color: #e0e0e0;
+  padding: 10px 0px;
+}
+footer div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer div ul {
+  display: flex;
+  list-style: none;
+}
+footer div ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 10px;
+}
+footer div table tr td a{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 15px;
+  color: white;
+}
+footer div span{
+  color: #ededed;
+  font-family: "montserrat", sans-serif;
+}
+footer div span a{
+  color: #ededed;
+  font-family: "montserrat", sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+#mini-banner, #mini-banner-body, #mini-banner-self, #mini-banner-hair{
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(#0007, #0007),url("bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#mini-banner h1, #mini-banner-body h1, #mini-banner-self h1, #mini-banner-hair h1{
+  color: white;
+  font-family: "Satisfy",cursive;
+  font-size: 70px;
+}
+#mini-banner p, #mini-banner-body p, #mini-banner-self p, #mini-banner-hair p{
+  color: white;
+  font-family: "Satisfy",cursive;
+  font-size: 30px;
+}
+#mini-banner-body{
+  background-image: linear-gradient(#0007, #0007),url("bodyBg.jpg");
+}
+#mini-banner-hair{
+  background-image: linear-gradient(#0007, #0007),url("hairBg.jpg");
+}
+#mini-banner-self{
+  background-image: linear-gradient(#0007, #0007),url("selfBg.jpg");
+}
+.inscription-body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form.inscription{
+  width: 50%;
+  z-index: 1;
+  background: #ffffff67;
+  backdrop-filter: blur(10px);
+  /* border: 1px white solid; */
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#inscVideo{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#gg-pic{
+  width: 22px;
+  margin-left: 5px;
+}
+.logo{
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  color: white;
+  font-size: 30px; font-family: "Satisfy",cursive;
+  text-decoration: none;
+}
+form.inscription h1{
+  font-size: 30px;
+  font-family: "Satisfy",cursive;
+  text-decoration: none;
+  font-size: 50px;
+  color: #dd677c;
+  margin-left: 20px;
+}
+
+form.inscription label{
+  color: #444;
+  font-family: "montserrat", sans-serif;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+
+form.inscription input{
+  background-color: white;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+#hr{
+  display: flex;
+  align-items: center;
+justify-content: center;
+}
+#hr p{
+  padding: 5px 10px;color: #444;
+  font-family: "Satisfy";
+}
+#hr hr{
+  width: 50%;
+}
+form.inscription button{
+  background-color: white;
+  font-family: "montserrat", sans-serif;
+  color: #444;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  width: 50%;
+  padding: 5px;
+  align-self: center;
+}
+#copy{
+  font-family: "montserrat", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  z-index: 2;
+  bottom: 10px ;
+  right: 20px;
+  color: #333;
+}
+form.inscription button.submit{
+  background-color: #dd677c;
+  color: white;
+}
